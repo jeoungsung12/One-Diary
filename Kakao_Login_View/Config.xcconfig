@@ -1,0 +1,10 @@
+//
+//  Config.xcconfig
+//  Kakao_Login_View
+//
+//  Created by 정성윤 on 2023/03/03.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+KAKAO_NATIVE_APP_KEY = 3d77da3ceb63d94219cb802240d25cc9
