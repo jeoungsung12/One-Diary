@@ -12,7 +12,9 @@ struct TextView: View {
     //    @StateObject var textdict : UITextFieldDelegate = UITextFieldDelegate()
 //    @Binding var year2 : String
 //    @Binding var year3 : String
+    @State var shortString : String = "S"
     @State var year = Date()
+    @State var short = Date()
     @State var year_ = Date()
     @State var yearString: String = ""
     //    @State var month = Date()
@@ -23,30 +25,44 @@ struct TextView: View {
     @State var feelString: String = ""
     //    @State var story = Date()
     //    @State var storyString: String = ""
-    @State var sun = Date()
-    @State var sunString: String = ""
+    @State var weather = Date()
+    @State var weatherString: String = ""
     @State private var go: Bool = false
     @State private var go_to_long: Bool = false
-    @State var manager = DataPost()
+    @State private var go_to_menu: Bool = false
+    @State var manager = DataPost_()
     var body: some View {
         NavigationView(){
             VStack{
+                HStack{
+//                    Text("")
+                    NavigationLink(destination: MainView()
+                        .navigationBarBackButtonHidden(true),
+                                   isActive: $go_to_menu){
+                        Button("Main >>"){
+                            //print("Clicked")
+                            //                                self.manager2.checkDeatils(story2: self.story2_String)
+                            action : do {go_to_menu = true}
+                        }
+                        .foregroundColor(.blue)
+//                        .bold()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
+                    }
+                    Spacer()
+                }
                     DatePicker("오늘 날짜 : ", selection: $year_, displayedComponents: .date)
-                    HStack{
-                        Text("날짜 :\t\t");
-                        TextField("yyyy-mm-dd ", text: $yearString);
-                        //                    Text("년");
-                        //                    TextField("       00",
-                        //                              text:  $monthString);
-                        //                    Text("월");
-                        //                    TextField("       00",
-                        //                              text: $dayString);
-                        //                    Text("일");
-                    }
-                    HStack{
-                        Text("날씨 :\t\t");
-                        TextField("맑음", text: $sunString);
-                    }
+                HStack{
+                    Text("날짜 :\t\t");
+                    TextField("yyyy-mm-dd ", text: $yearString);
+                    //                    Text("년");
+                    //                    TextField("       00",
+                    //                              text:  $monthString);
+                    //                    Text("월");
+                    //                    TextField("       00",
+                    //                              text: $dayString);
+                    //                    Text("일");
+                }
+                
                     VStack{
                         NavigationView(){
                             LottieView(filename: "feeling")
@@ -57,7 +73,7 @@ struct TextView: View {
                     .font(.system(size:25))
                     TextEditor(text: $feelString)
                     .lineLimit(30)
-                    .frame(width:350, height: 100)
+                    .frame(width:310, height: 100)
                     .border(/*@START_MENU_TOKEN@*/Color.gray/*@END_MENU_TOKEN@*/, width: 0.2)
                         .font(.system(size:20))
                         .fontWeight(.bold)
@@ -78,13 +94,15 @@ struct TextView: View {
                                 //                    sunString = dateFormatter.string(from: sun)
                                 
                                 print("Clicked")
-                                self.manager.checkDeatils(year: self.yearString, feel: self.feelString, sun: self.sunString)
+                                self.manager.checkDeatils(year: self.yearString, feel: self.feelString, weather: self.weatherString, short: self.shortString)
                                 action : do {go = true}
-                            }.disabled(yearString.isEmpty || feelString.isEmpty || sunString.isEmpty)
+                            }.disabled(yearString.isEmpty || feelString.isEmpty)
                                 .frame(width: 100, height: /*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
-                                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.103, saturation: 0.235, brightness: 0.992, opacity: 0.781)/*@END_MENU_TOKEN@*/)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
-                        }.disabled(yearString.isEmpty || feelString.isEmpty || sunString.isEmpty)
+//                                .bold()
+                                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.white)
+                                .clipShape(RoundedRectangle(cornerRadius: 10))
+                        }.disabled(yearString.isEmpty || feelString.isEmpty)
                     Spacer()
                     NavigationLink(destination: LongTextView()
                         .navigationBarBackButtonHidden(true),
@@ -95,8 +113,10 @@ struct TextView: View {
                             action : do {go_to_long = true}
                         }
                         .frame(width: 100, height: /*@START_MENU_TOKEN@*/30.0/*@END_MENU_TOKEN@*/)
-                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.103, saturation: 0.235, brightness: 0.992, opacity: 0.781)/*@END_MENU_TOKEN@*/)
-                        .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
+                        .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.black/*@END_MENU_TOKEN@*/)
+                        .foregroundColor(.white)
+//                        .bold()
+                        .clipShape(RoundedRectangle(cornerRadius: 10))
                     }
                     Spacer()
                 }
@@ -104,43 +124,6 @@ struct TextView: View {
         }
     }
 }
-   
-class DataPost: ObservableObject{
-        var didChange = PassthroughSubject<DataPost, Never>()
-        var formCompleted = false{
-            didSet{
-                didChange.send(self)
-            }
-        }
-        func checkDeatils(year : String, feel : String, sun : String){
-            let body: [String: Any] = ["localDate": year, "contents" : feel, "sun" : sun]
-            let jsonData = try? JSONSerialization.data(withJSONObject: body)
-            let url = URL(string: "http://52.78.241.137:8080/users/1/diary/content")!
-            //http://52.78.241.137:8080/auth/login
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("\(String(describing: jsonData?.count))", forHTTPHeaderField: "Content-Length")
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            
-            request.httpBody = jsonData
-            
-            print(body)
-            print(jsonData)
-            let task = URLSession.shared.dataTask(with: request) { data, response, error in
-                guard let data = data, error == nil else {
-                    print(error?.localizedDescription ?? "No data")
-                    return
-                }
-                
-                let responseJSON = try? JSONSerialization.jsonObject(with: data, options: [])
-                if let responseJSON = responseJSON as? [String: Any] {
-                    print(responseJSON)
-                }
-            }
-            task.resume()
-        }
-    }
-    
   
 struct TextView_Previews: PreviewProvider {
         static var previews: some View {

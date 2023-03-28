@@ -10,7 +10,7 @@ import SwiftUI
 import UIKit
 import Lottie
 //로티 애니메이션 뷰
-struct LottieView : UIViewRepresentable{
+struct LottieView3 : UIViewRepresentable{
     typealias UIViewType = UIView
     var filename: String
     func makeUIView(context: Context) -> UIView {
@@ -22,15 +22,15 @@ struct LottieView : UIViewRepresentable{
                 animationView.animation = LottieAnimation.named(filename)
                 //애니메이션 크기가 적절하게 조정될 수 있도록
                 animationView.contentMode = .scaleAspectFit
-                animationView.loopMode = .playOnce
+                animationView.loopMode = .loop
                 //애니메이션 재생
                 animationView.play()
-                
+        
+       // animationView.play(fromProgress : 0, toProgress: 0.7)
                 //컨테이너의 너비와 높이를 자동으로 지정할 수 있도록
                 animationView.translatesAutoresizingMaskIntoConstraints = false
                 view.addSubview(animationView)
                 
-//        animationView.play(fromProgress : 0.23, toProgress: 0.3)
                 //5. 자동완성 기능
                 NSLayoutConstraint.activate([
                     //레이아웃의 높이와 넓이의 제약

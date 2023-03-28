@@ -11,6 +11,9 @@ import Combine
 struct ContentView: View {
     @State private var go: Bool = false
     @State private var hasTimeElapsed = false
+    @State private var isLoggedIn: Bool = false
+    @StateObject var result : send = send()
+    
     var body: some View {
         NavigationView{
             VStack{
@@ -20,17 +23,15 @@ struct ContentView: View {
                 Text("한 줄의 기록을 담다").foregroundColor(.gray)
                     .font(.system(size: 20))
                 Spacer()
-                NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true), isActive: $go){}.task(delayNext)
+//                NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true), isActive: $go){}.task(delayNext)
+                if !isLoggedIn{
+                    NavigationLink(destination: LoginView().navigationBarBackButtonHidden(true), isActive: $go){}.task(delayNext)
+                }else{
+                    NavigationLink(destination: TextView().navigationBarBackButtonHidden(true), isActive: $go){}.task(delayNext)
                 }
-//                NavigationLink(destination: LoginView()
-//                    .navigationBarBackButtonHidden(true),
-//                               label: {Text("시작하기")})
-//                .padding(.horizontal)
-//                .frame(width: 180, height: 35)
-//                .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.103, saturation: 0.235, brightness: 0.992, opacity: 0.781)/*@END_MENU_TOKEN@*/)
-//                .foregroundColor(/*@START_MENU_TOKEN@*/.black/*@END_MENU_TOKEN@*/)
-            }.padding()
-        }
+            }
+        }.padding()
+    }
     private func delayNext() async{
         try? await Task.sleep(nanoseconds: 3_000_000_000)
         hasTimeElapsed = true

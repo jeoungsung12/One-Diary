@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E40AE40429CAEE9E00A18A6F /* pencil.json in Resources */ = {isa = PBXBuildFile; fileRef = E40AE40329CAEE9E00A18A6F /* pencil.json */; };
+		E40AE40629CAEF0B00A18A6F /* LottieView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40AE40529CAEF0B00A18A6F /* LottieView3.swift */; };
+		E40AE40829CB4F1B00A18A6F /* message.json in Resources */ = {isa = PBXBuildFile; fileRef = E40AE40729CB4F1B00A18A6F /* message.json */; };
+		E40AE40A29CB50C700A18A6F /* welcome.json in Resources */ = {isa = PBXBuildFile; fileRef = E40AE40929CB50C700A18A6F /* welcome.json */; };
+		E40AE40C29CB524C00A18A6F /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40AE40B29CB524C00A18A6F /* WelcomeView.swift */; };
+		E4153DFC29C8B79600BD4171 /* hello.json in Resources */ = {isa = PBXBuildFile; fileRef = E4153DFB29C8B79600BD4171 /* hello.json */; };
+		E4153DFE29C8BA0C00BD4171 /* grass.json in Resources */ = {isa = PBXBuildFile; fileRef = E4153DFD29C8BA0C00BD4171 /* grass.json */; };
+		E4153E0029C8BA5C00BD4171 /* grass2.json in Resources */ = {isa = PBXBuildFile; fileRef = E4153DFF29C8BA5C00BD4171 /* grass2.json */; };
+		E4153E0229C8BC3A00BD4171 /* LottieView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4153E0129C8BC3A00BD4171 /* LottieView2.swift */; };
 		E4555CFD29B1C52A003B7C1D /* Kakao_Login_ViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4555CFC29B1C52A003B7C1D /* Kakao_Login_ViewApp.swift */; };
 		E4555CFF29B1C52A003B7C1D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4555CFE29B1C52A003B7C1D /* ContentView.swift */; };
 		E4555D0129B1C52C003B7C1D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4555D0029B1C52C003B7C1D /* Assets.xcassets */; };
@@ -43,12 +52,23 @@
 		E4555D6129B77AC6003B7C1D /* BaseIntercepter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4555D6029B77AC6003B7C1D /* BaseIntercepter.swift */; };
 		E4555D6329B77BC6003B7C1D /* ApiLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4555D6229B77BC6003B7C1D /* ApiLogger.swift */; };
 		E4555D6529B77D49003B7C1D /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4555D6429B77D49003B7C1D /* AuthRouter.swift */; };
+		E4FB411729CC6849001C495C /* bird.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FB411629CC6849001C495C /* bird.json */; };
+		E4FB411929CC6D1D001C495C /* walk.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FB411829CC6D1C001C495C /* walk.json */; };
 		E4FD1A5E29BF2E9A00CB2549 /* flower.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD1A5D29BF2E9900CB2549 /* flower.json */; };
 		E4FD1A6029BF324F00CB2549 /* grow.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD1A5F29BF324F00CB2549 /* grow.json */; };
 		E4FD1A6229BF33EC00CB2549 /* plant.json in Resources */ = {isa = PBXBuildFile; fileRef = E4FD1A6129BF33EC00CB2549 /* plant.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E40AE40329CAEE9E00A18A6F /* pencil.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = pencil.json; path = ../../../Downloads/pencil.json; sourceTree = "<group>"; };
+		E40AE40529CAEF0B00A18A6F /* LottieView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView3.swift; sourceTree = "<group>"; };
+		E40AE40729CB4F1B00A18A6F /* message.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = message.json; path = ../../../Downloads/message.json; sourceTree = "<group>"; };
+		E40AE40929CB50C700A18A6F /* welcome.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = welcome.json; path = ../../../Downloads/welcome.json; sourceTree = "<group>"; };
+		E40AE40B29CB524C00A18A6F /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		E4153DFB29C8B79600BD4171 /* hello.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = hello.json; path = ../../../Downloads/hello.json; sourceTree = "<group>"; };
+		E4153DFD29C8BA0C00BD4171 /* grass.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = grass.json; path = ../../../Downloads/grass.json; sourceTree = "<group>"; };
+		E4153DFF29C8BA5C00BD4171 /* grass2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = grass2.json; path = ../../../Downloads/grass2.json; sourceTree = "<group>"; };
+		E4153E0129C8BC3A00BD4171 /* LottieView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView2.swift; sourceTree = "<group>"; };
 		E4555CF929B1C52A003B7C1D /* Kakao_Login_View.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kakao_Login_View.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4555CFC29B1C52A003B7C1D /* Kakao_Login_ViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kakao_Login_ViewApp.swift; sourceTree = "<group>"; };
 		E4555CFE29B1C52A003B7C1D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +98,8 @@
 		E4555D6029B77AC6003B7C1D /* BaseIntercepter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseIntercepter.swift; sourceTree = "<group>"; };
 		E4555D6229B77BC6003B7C1D /* ApiLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiLogger.swift; sourceTree = "<group>"; };
 		E4555D6429B77D49003B7C1D /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		E4FB411629CC6849001C495C /* bird.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = bird.json; path = ../../../Downloads/bird.json; sourceTree = "<group>"; };
+		E4FB411829CC6D1C001C495C /* walk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = walk.json; path = ../../../Downloads/walk.json; sourceTree = "<group>"; };
 		E4FD1A5D29BF2E9900CB2549 /* flower.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = flower.json; path = ../../../Downloads/flower.json; sourceTree = "<group>"; };
 		E4FD1A5F29BF324F00CB2549 /* grow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = grow.json; path = ../../../Downloads/grow.json; sourceTree = "<group>"; };
 		E4FD1A6129BF33EC00CB2549 /* plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = plant.json; path = ../../../Downloads/plant.json; sourceTree = "<group>"; };
@@ -123,18 +145,27 @@
 		E4555CFB29B1C52A003B7C1D /* Kakao_Login_View */ = {
 			isa = PBXGroup;
 			children = (
+				E4FB411829CC6D1C001C495C /* walk.json */,
+				E4FB411629CC6849001C495C /* bird.json */,
+				E40AE40329CAEE9E00A18A6F /* pencil.json */,
+				E4153DFF29C8BA5C00BD4171 /* grass2.json */,
+				E4153DFD29C8BA0C00BD4171 /* grass.json */,
 				E4FD1A6129BF33EC00CB2549 /* plant.json */,
+				E4153DFB29C8B79600BD4171 /* hello.json */,
 				E4FD1A5F29BF324F00CB2549 /* grow.json */,
 				E4FD1A5D29BF2E9900CB2549 /* flower.json */,
 				E4555D5C29B5DE47003B7C1D /* book.json */,
 				E4555D5829B3802A003B7C1D /* tree.json */,
+				E40AE40929CB50C700A18A6F /* welcome.json */,
 				E4555D4029B3709D003B7C1D /* feeling.json */,
 				E4555D4229B3709D003B7C1D /* google-anim.json */,
 				E4555D4329B3709D003B7C1D /* happy.json */,
 				E4555D4129B3709D003B7C1D /* jolove.json */,
 				E4555D4529B3709D003B7C1D /* loading_anim.json */,
 				E4555D4429B3709D003B7C1D /* login_anim.json */,
+				E40AE40729CB4F1B00A18A6F /* message.json */,
 				E4555D1E29B1C796003B7C1D /* Config.xcconfig */,
+				E40AE40B29CB524C00A18A6F /* WelcomeView.swift */,
 				E4555D3729B1CC8C003B7C1D /* MySceneDelegate.swift */,
 				E4555D1F29B1C9B8003B7C1D /* MyAppDelegate.swift */,
 				E4555D1D29B1C70C003B7C1D /* Kakao-Login-View-Info.plist */,
@@ -146,6 +177,8 @@
 				E4555D5429B37C6E003B7C1D /* DiaryView.swift */,
 				E4555D5029B37B56003B7C1D /* TextView.swift */,
 				E4555D3E29B36FAD003B7C1D /* LoginView.swift */,
+				E40AE40529CAEF0B00A18A6F /* LottieView3.swift */,
+				E4153E0129C8BC3A00BD4171 /* LottieView2.swift */,
 				E4555D4E29B37136003B7C1D /* LottieView.swift */,
 				E4555D5A29B3818E003B7C1D /* IntroView.swift */,
 				E4555D6229B77BC6003B7C1D /* ApiLogger.swift */,
@@ -240,18 +273,26 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4FB411729CC6849001C495C /* bird.json in Resources */,
+				E4153E0029C8BA5C00BD4171 /* grass2.json in Resources */,
 				E4555D4A29B3709D003B7C1D /* login_anim.json in Resources */,
 				E4555D4829B3709D003B7C1D /* google-anim.json in Resources */,
 				E4555D4629B3709D003B7C1D /* feeling.json in Resources */,
 				E4555D5D29B5DE47003B7C1D /* book.json in Resources */,
 				E4FD1A6229BF33EC00CB2549 /* plant.json in Resources */,
 				E4555D4B29B3709D003B7C1D /* loading_anim.json in Resources */,
+				E4153DFC29C8B79600BD4171 /* hello.json in Resources */,
+				E40AE40429CAEE9E00A18A6F /* pencil.json in Resources */,
 				E4555D4929B3709D003B7C1D /* happy.json in Resources */,
 				E4555D0429B1C52C003B7C1D /* Preview Assets.xcassets in Resources */,
+				E40AE40829CB4F1B00A18A6F /* message.json in Resources */,
+				E4153DFE29C8BA0C00BD4171 /* grass.json in Resources */,
 				E4555D4729B3709D003B7C1D /* jolove.json in Resources */,
 				E4FD1A6029BF324F00CB2549 /* grow.json in Resources */,
 				E4555D5929B3802A003B7C1D /* tree.json in Resources */,
 				E4FD1A5E29BF2E9A00CB2549 /* flower.json in Resources */,
+				E40AE40A29CB50C700A18A6F /* welcome.json in Resources */,
+				E4FB411929CC6D1D001C495C /* walk.json in Resources */,
 				E4555D0129B1C52C003B7C1D /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4555D5529B37C6E003B7C1D /* DiaryView.swift in Sources */,
+				E40AE40629CAEF0B00A18A6F /* LottieView3.swift in Sources */,
 				E4555D3F29B36FAD003B7C1D /* LoginView.swift in Sources */,
 				E4555D5729B37F46003B7C1D /* LongTextView.swift in Sources */,
 				E4555D5329B37B61003B7C1D /* MainView.swift in Sources */,
@@ -279,6 +321,8 @@
 				E4555CFD29B1C52A003B7C1D /* Kakao_Login_ViewApp.swift in Sources */,
 				E4555D6529B77D49003B7C1D /* AuthRouter.swift in Sources */,
 				E4555D3829B1CC8C003B7C1D /* MySceneDelegate.swift in Sources */,
+				E4153E0229C8BC3A00BD4171 /* LottieView2.swift in Sources */,
+				E40AE40C29CB524C00A18A6F /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
